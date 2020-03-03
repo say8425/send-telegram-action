@@ -1,0 +1,21 @@
+name: Send Telegram Action
+description: Send telegram for GitHub Actions
+inputs:
+  telegram_key:
+    description: Telegram Key
+    required: true
+  chat_id: 
+    description: Telegram Chat Id
+    required: true
+    default: '-344041454'
+  text:
+    description: Telegram text message
+    required: false
+outputs:
+  status:
+    description: Delivery status
+  sent_at:
+    description: Delivery time
+runs:
+  using: node12
+  main: dist/index.js

@@ -1,0 +1,13 @@
+{
+  "name": "send-telegram-action",
+  "version": "1.0.0",
+  "description": "send telegram action",
+  "main": "index.js",
+  "repository": "https://github.com/say8425/send-telegram-action.git",
+  "author": "Penguin",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "axios": "^0.19.2"
+  }
+}
