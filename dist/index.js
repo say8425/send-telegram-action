@@ -48,7 +48,7 @@ module.exports =
 
 const core = __webpack_require__(258)
 const axios = __webpack_require__(954)
-const telegramUrl = 'https://api.telegram.org/bot635365494:AAGZnt0iG5d8SlIslO9bRXoiEHl4rEyHyLw/sendMessage'
+const telegramUrl = `https://api.telegram.org/bot635365494:${core.getInput('telegram_key')}/sendMessage`
 
 async function postTelegram () {
   try {

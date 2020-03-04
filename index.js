@@ -1,6 +1,6 @@
 const core = require('@actions/core')
 const axios = require('axios')
-const telegramUrl = 'https://api.telegram.org/bot635365494:AAGZnt0iG5d8SlIslO9bRXoiEHl4rEyHyLw/sendMessage'
+const telegramUrl = `https://api.telegram.org/bot635365494:${core.getInput('telegram_key')}/sendMessage`
 
 async function postTelegram () {
   try {
