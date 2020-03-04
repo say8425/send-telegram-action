@@ -5,8 +5,8 @@ const telegramUrl = 'https://api.telegram.org/bot635365494:AAGZnt0iG5d8SlIslO9bR
 async function postTelegram () {
   try {
     const response = await axios.post(telegramUrl, {
-      chat_id: '-344041454',
-      text: '-344041454'
+      chat_id: core.getInput('chat_id'),
+      text: core.getInput('text')
     })
     // core.setOutput('status', response.data.ok)
     // core.setOutput('sent_at', new Date(response.data.result.date).toTimeString())
