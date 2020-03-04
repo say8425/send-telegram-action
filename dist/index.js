@@ -52,7 +52,7 @@ const telegramUrl = `https://api.telegram.org/bot635365494:${core.getInput('tele
 
 async function postTelegram() {
   try {
-    const response = axios.post(telegramUrl, {
+    const response = await axios.post(telegramUrl, {
       chat_id: core.getInput('chat_id'),
       text: core.getInput('text')
     })
