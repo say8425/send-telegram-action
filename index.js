@@ -11,7 +11,7 @@ async function postTelegram () {
     core.setOutput('status', response.data.ok)
     core.setOutput('sent_at', new Date(response.data.result.date).toTimeString())
   } catch (error) {
-    // core.setFailed(error)
+    core.setFailed(error.response.data)
   }
 }
 
