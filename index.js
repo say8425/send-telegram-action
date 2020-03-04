@@ -8,8 +8,8 @@ async function postTelegram () {
       chat_id: core.getInput('chat_id'),
       text: core.getInput('text')
     })
-    // core.setOutput('status', response.data.ok)
-    // core.setOutput('sent_at', new Date(response.data.result.date).toTimeString())
+    core.setOutput('status', response.data.ok)
+    core.setOutput('sent_at', new Date(response.data.result.date).toTimeString())
   } catch (error) {
     // core.setFailed(error)
   }
