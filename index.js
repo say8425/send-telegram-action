@@ -11,10 +11,10 @@ async function postTelegram () {
     console.log(response.data.ok)
     console.log(new Date(response.data.result.date))
   } catch (error) {
-    console.error(error)
+    return Promise.reject(error.response)
   }
 }
 
 postTelegram().catch(error => {
-  core.setFailed(console.error)
+  core.setFailed(error)
 })
