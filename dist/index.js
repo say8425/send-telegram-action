@@ -57,13 +57,15 @@ async function postTelegram () {
       text: core.getInput('text')
     })
     console.log(response.data.ok)
-    console.log(new Date(response.data.result.date).toTimeString())
+    console.log(new Date(response.data.result.date))
   } catch (error) {
+    console.log(error)
     reject(error.response.data)
   }
 }
 
 postTelegram().catch(error => {
+  console.log(error)
   core.setFailed(error)
 })
 
