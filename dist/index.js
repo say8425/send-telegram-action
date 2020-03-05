@@ -59,7 +59,7 @@ async function postTelegram () {
     console.log(response.data.ok)
     console.log(new Date(response.data.result.date))
   } catch (error) {
-    return Promise.reject(error.response)
+    return Promise.reject(JSON.stringify(error.response.data))
   }
 }
 
