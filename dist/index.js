@@ -59,14 +59,13 @@ async function postTelegram () {
     console.log(response.data.ok)
     console.log(new Date(response.data.result.date))
   } catch (error) {
-    console.log(error)
-    reject(error.response.data)
+    console.error(error)
   }
 }
 
 postTelegram().catch(error => {
   console.log(error)
-  core.setFailed(error)
+  core.setFailed(console.error)
 })
 
 
