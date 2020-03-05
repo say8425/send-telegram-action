@@ -16,6 +16,5 @@ async function postTelegram () {
 }
 
 postTelegram().catch(error => {
-  console.log(error)
   core.setFailed(console.error)
 })
