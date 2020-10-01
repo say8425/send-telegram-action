@@ -7,7 +7,7 @@
   "author": "Penguin",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "axios": "^0.19.2"
   }
 }
